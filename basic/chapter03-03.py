@@ -1,7 +1,7 @@
 # chapter03-03
 
-# list : 'array' in other languages
-# 수정o, 삭제o, 순서o, 중복o
+# List : *** mutable ***, 'array' in other languages
+# 순서o, 중복o, 수정o, 삭제o
 
 # declaration
 a = []
@@ -79,7 +79,7 @@ a.sort()
 print('a :', a)
 a.reverse()
 print('a :', a)
-print('a[3] :', a.index(3))
+print('index of 3 :', a.index(3)) # 인덱스를 구하는 함수
 a.insert(2, 7)
 print('a :', a)
 a.reverse()
@@ -87,12 +87,12 @@ print('a :', a)
 # del a[6] # 데이터 갯수가 많을 때 인덱스를 세는 것은 불편하거나 거의 불가능
 a.remove(10) # 지우고 싶은 값을 바로 입력
 print('a :', a)
-print('a :', a.pop()) # append의 역순으로 pop
+print('pop of a :', a.pop()) # append의 역순으로 pop
 print('a :', a)
-print('a :', a.pop())
+print('pop of a :', a.pop())
 print('a :', a)
-print('a :', a.count(1)) # 갯수 구하기
-print('a :', a.count(5))
+print('count of 1 :', a.count(1)) # 갯수 구하기
+print('count of 5 :', a.count(5))
 ex = [8, 9]
 a.extend(ex)
 print('a :', a)
@@ -103,4 +103,3 @@ print('a :', a)
 while a:
     data = a.pop()
     print(data)
-

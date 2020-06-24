@@ -1,6 +1,6 @@
 # chapter03-02
 
-# string
+# String
 str1 = "I am Python"
 str2 = 'Python'
 str3 = """How are you?"""

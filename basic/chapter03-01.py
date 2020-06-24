@@ -1,6 +1,6 @@
 # chapter03-01
 
-# data type
+# Data Type
 """
 1. int : 정수
 2. float : 실수

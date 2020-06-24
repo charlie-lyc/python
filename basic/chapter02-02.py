@@ -1,7 +1,7 @@
 # python basic
 # chapter02-2
 
-# variable
+# Variable
 
 # declaration
 n = 700
