@@ -1,4 +1,5 @@
 # chapter03-01
+
 # data type
 """
 1. int : 정수

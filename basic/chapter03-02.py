@@ -1,6 +1,6 @@
 # chapter03-02
-# string
 
+# string
 str1 = "I am Python"
 str2 = 'Python'
 str3 = """How are you?"""
@@ -68,7 +68,7 @@ print(multi_str2)
 print(multi_str3)
 print()
 
-# string opreration
+# opreration
 str_o1 = "python"
 str_o2 = "apple"
 str_o3 = "How are you doing"
@@ -105,7 +105,7 @@ print()
 #####***** slicing *****#####
 str_sl = 'Nice Python'
 print(len(str_sl))
-# practice
+# slicing practice
 print(str_sl[0:3])
 print(str_sl[5:])
 print(str_sl[:len(str_sl)])
