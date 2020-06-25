@@ -1,7 +1,7 @@
 # chapter03-04
 
 # Tuple : *** immutable ***
-# 순서o, 중복o, 수정x, 삭제x
+# 순서o, 중복o, *** 수정x*** , *** 삭제x ***
 
 # declaration
 a = ()
@@ -74,3 +74,5 @@ print(t1)
 print(t2)
 print(x1, x2, x3)
 print(x4, x5, x6)
+
+

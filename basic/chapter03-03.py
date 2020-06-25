@@ -103,3 +103,5 @@ print('a :', a)
 while a:
     data = a.pop()
     print(data)
+
+

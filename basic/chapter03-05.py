@@ -2,7 +2,7 @@
 
 # Dictionary : key - value
 # 범용적으로 가장 많이 사용
-# 순서x, 키 중복x, 수정o, 삭제o
+# *** 순서x ***, *** 키 중복x ***, 수정o, 삭제o
 
 # declaration
 a = {}
@@ -148,4 +148,5 @@ print()
 print("'birth' in a :", 'birth' in a)
 print("'birthday' in a :", 'birthday' in a)
 print("'City' in d :", 'City' in d)
+
 

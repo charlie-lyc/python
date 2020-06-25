@@ -1,7 +1,7 @@
 # chapter03-06
 
 # Set
-# 순서x, 중복x, 수정o, 삭제o
+# *** 순서x ***, *** 중복x ***, 수정o, 삭제o
 
 # declaration
 a = set()
@@ -75,3 +75,5 @@ s1.discard(7)
 print('s1 ;', s1)  # No Error
 s1.clear() # empty set
 print('s1 ;', s1)
+
+

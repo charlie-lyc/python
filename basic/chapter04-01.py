@@ -1,6 +1,6 @@
 # chapter04-01
 
-# IF sentence
+# IF : conditional statement
 
 # 0이 아닌수, "abc", [1, 2, 3], (1, 2, 3), ...
 print(type(True))
@@ -19,7 +19,7 @@ if '':
     print('Bad')
 print()
 
-# example2
+# example02
 if False:
     print('Bad!')
 else:
@@ -37,7 +37,7 @@ print(x < y)
 print(x <= y)
 print()
 
-# example3
+# example03
 city = ''
 if city:
     print('You are in %s.' % city)
@@ -71,19 +71,64 @@ print('e3 ;', 5 + 10 > 3 and 7 + 3 == 10)
 print('e4 ;', 5 + 10 > 0 and not 7 + 3 == 10)
 print()
 
-# example4
+# example04
 score1 = 70
 score2 = 'A'
 if score1 >= 90 and score2 == 'A':
     print('Pass')
 else:
     print('Fail')
+print()
 
-# example5
+# example05
 id1 = 'vip'
 id2 = 'admin'
 grade = 'platinum'
 
-if id1 == 'vip' or id2 = 'admin':
-    print('Entering Administrator')
+if id1 == 'vip' or id2 == 'admin':
+    print('Administrator')
+
+if id2 == 'admin' and grade == 'platinum':
+    print('Super Administrator')
+print()
+
+# example6 : multi condition
+num = 75
+if num >= 90:
+    print('Grade : A')
+elif num >= 80:
+    print('Grade : B')
+elif num >= 70:
+    print('Grade : c')
+else:
+    print('Fail')
+print()
+
+# Nested IF
+grade = 'A'
+total = 95
+if grade == 'A':
+    if total >= 90:
+        print('scholarship 100%')
+    elif total >= 80:
+        print('scholarship 80%')
+    else:
+        print('scholarship 50%')
+else:
+    print('no scholarship')
+print()
+
+# in, not in
+
+q = [10, 20, 30]
+w = {70, 80, 90, 100}
+e = {'name': 'Lee', 'city': 'Seoul', 'grade':'A'}
+r = (10, 12, 14)
+print(15 in q)
+print(90 in w)
+print(12 not in r)
+print('name' in e)
+print('Seoul' in e.values())
+print()
+
 
