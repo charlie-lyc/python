@@ -1,3 +1,8 @@
+import sys
+import io
+sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding = 'utf-8')
+sys.stderr = io.TextIOWrapper(sys.stderr.detach(), encoding = 'utf-8')
+
 # python basic
 # chapter02-2
 
@@ -77,10 +82,10 @@ age_ = 7
 _AGE_ = 8
 
 # unaccepable case : starting with number, reserved words
-# 1age = 9 
+# 1age = 9
 # for = 10
 """
-and as assert break class continue def del elif else except 
-False finally for from global if in is import lambda None 
-nonlocal not or pass raise return True try while with yield       
+and as assert break class continue def del elif else except
+False finally for from global if in is import lambda None
+nonlocal not or pass raise return True try while with yield
 """

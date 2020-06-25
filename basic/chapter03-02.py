@@ -53,7 +53,7 @@ String
 Multi Line
 Test
 '''
-# multi_str2 = 
+# multi_str2 =
 # '''
 # String
 # Multi Line

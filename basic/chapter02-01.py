@@ -1,7 +1,7 @@
-# python basic
 # chapter02-1
 
 # print function
+import sys
 print('python start!')
 print('''python start!''')
 print("""python start!""")
@@ -20,7 +20,6 @@ print('Web site')
 print()
 
 # file option
-import sys
 print('learn python', file=sys.stdout)
 # print('learn python', file='test.txt')
 print()
@@ -80,4 +79,3 @@ print('{:.8f}'.format(3.1442))
 print('{:8.2f}'.format(3.1442))
 print('{:8.5f}'.format(3.1442))
 print('{:08.5f}'.format(3.1442))
-

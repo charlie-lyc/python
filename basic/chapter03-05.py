@@ -35,8 +35,6 @@ f = dict(
     Grade = 'A',
     Status = True
 )
-print((d == e) & (e == f))
-print()
 print('a :', type(a), a)
 print('b :', type(b), b)
 print('c :', type(c), c)
