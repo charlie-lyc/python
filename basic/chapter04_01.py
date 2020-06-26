@@ -119,7 +119,6 @@ else:
 print()
 
 # in, not in
-
 q = [10, 20, 30]
 w = {70, 80, 90, 100}
 e = {'name': 'Lee', 'city': 'Seoul', 'grade':'A'}

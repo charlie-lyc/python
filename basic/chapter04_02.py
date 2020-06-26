@@ -75,7 +75,7 @@ for key in my_info: # 앞선 for문을 통해 딕셔너리에 적용하면 키�
 	print('info :', my_info[key])
 print()
 
-# example04
+# example05
 for k in my_info.keys():
 	print('key :', k)
 print()
@@ -86,7 +86,7 @@ for i in my_info.items():
 	print('item :', i)
 print()
 
-# example05
+# example06
 name = 'PineAppLE'
 for n in name:
 	if n.isupper():
