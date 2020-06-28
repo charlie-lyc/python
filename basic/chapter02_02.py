@@ -1,7 +1,9 @@
-import sys
-import io
-sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding = 'utf-8')
-sys.stderr = io.TextIOWrapper(sys.stderr.detach(), encoding = 'utf-8')
+# 한글 깨짐 방지용 : 하지만 근본적으로 Python3.8에서 실행하면 아무런 이상이 없다.!!!
+# import sys
+# import io
+# sys.stdout = io.TextIOWrapper(sys.stdout.detach(), encoding = 'utf-8')
+# sys.stderr = io.TextIOWrapper(sys.stderr.detach(), encoding = 'utf-8')
+##########################################################################
 
 # python basic
 # chapter02-2
@@ -41,7 +43,7 @@ print(n, type(n))
 
 # n -> 777 <- m
 m = n
-print(m,n)
+print(m, n)
 print(type(m), type(n))
 
 m = 400
@@ -89,5 +91,3 @@ and as assert break class continue def del elif else except
 False finally for from global if in is import lambda None
 nonlocal not or pass raise return True try while with yield
 """
-
-
