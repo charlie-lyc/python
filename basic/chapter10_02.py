@@ -1,9 +1,13 @@
-## chapter10-01
+## chapter10-02
 
-## Mini Game : Hangman (1)
-# 1. 기본 프로그램 제작 및 중간 테스트 : 정답 단어를 정해 놓고 제작(정적프로그램)
+## Mini Game : Hangman (2)
+# 2. 정답 단어 무작위 선택, 힌트 및 사운드 추가 보완 : 동적 프로그램
+# 3. 최종 테스트
 
 import time
+import csv
+import random
+# import winsound # 아마도 윈도우에 내장되어 있는 외부함수 인듯
 
 # 처음 인사
 name = input('What is your name? ')
@@ -15,8 +19,22 @@ print('Start Loading...')
 time.sleep(0.5)
 print()
 
+# 정답 단어 : CSV파일 로드
+words = []
+with open('./resource/word_list.csv', 'r') as f:
+    r = csv.reader(f)
+    next(r)
+    for li in r:
+        words.append(li)
+
+# 리스트 섞기
+random.shuffle(words)
+
+# 정답 단어 랜덤 뽑기
+q = random.choice(words)
+
 # 정답 단어
-word = 'secret'
+word = q[0]
 
 # 추측 단어
 guesses = ''
@@ -44,13 +62,21 @@ while turns > 0:
     # 단어 추측이 성공한 경우
     if failed == 0:
         print()
+        # 성공 사운드
+        # winsound.PlaySound('./sound/good.wav', winsound.SND_FILENAME)
+        # 게임 성공 메시지
         print('Congratulations! The guess is correct!')
         break
     print()
 
-    # 추측 단어의 문자 단위 입력
+    # 추측 단어를 문자 단위로 입력 : 정답 단어보다 더 많은 문자 입력시 재입력 요구
+    guess = ''
+    while True:
+        guess = input('Guess a word >>> ')
+        if len(guess) <= len(word):
+            break
+        print('Enter the same number of characters at most!')   
     print()
-    guess = input('Guess a word. ')
 
     # 단어 더하기
     guesses += guess
@@ -63,7 +89,11 @@ while turns > 0:
         print('Oops! Wrong!')
         # 남은 기회 출력
         print('You have', turns, 'more guesses!')
+        # 힌트 출력
+        print('>>> Hint:', q[1].strip())
 
         if turns == 0:
+            # 성공 사운드
+            # winsound.PlaySound('./sound/bad.wav', winsound.SND_FILENAME)
             # 게임 실패 메시지
             print('You failed to Hangman game. Bye!')
