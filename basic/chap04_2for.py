@@ -19,6 +19,11 @@ for v3 in range(1, 11, 2):
 	print('v3 :', v3)
 print()
 
+for v4 in range(10, 1, -1):
+	print('v4 :', v4)
+print()
+
+
 # sum of 1 ~ 100
 sum1 = 0
 for v in range(1, 101):
@@ -132,11 +137,37 @@ for i in range(1, 10):
 	print()
 print()
 
-# Reverse
+# Reverse I
+sentence = 'I love you'
+repeat_sentence = ''
+reverse_sentence =''
+
+for char in sentence:
+	repeat_sentence = repeat_sentence + char
+print('Repeat sentence :', repeat_sentence)
+print()
+
+for char in sentence:
+	reverse_sentence = char + reverse_sentence
+print('Reverse sentence :', reverse_sentence)
+print()
+
+
+# Reverse II
 name2 = 'Aceman'
 print('Reversed :', reversed(name2))
 print('List :', list(reversed(name2)))
 print('Tuple :', tuple(reversed(name2)))
 print('Set :', set(reversed(name2))) # 순서x
+print()
+
+for char in list(reversed(name2)):
+	print(char, end='')
+
+
+
+
+
+
 
 
