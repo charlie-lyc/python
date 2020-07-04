@@ -79,5 +79,19 @@ print('{:.8f}'.format(3.1442))
 print('{:8.2f}'.format(3.1442))
 print('{:8.5f}'.format(3.1442))
 print('{:08.5f}'.format(3.1442))
+print()
+
+# list type !!!
+print('Product: %10s, Price per unit: %10.2f.' % ('Apple', 5.243))
+print('Product: {0:10s}, Price per unit: {1:10.2f}.'.format('Apple', 5.243))
+print('Product: {:_>10s}, Price per unit: {:010.2f}.'.format('Apple', 5.243))
+print('Price per unit: {1:010.2f}, Product: {0:_>10s}.'.format('Apple', 5.243))
+print()
+
+# dict type !!!
+print('Product: %(name)10s, Price per unit: %(price)10.2f.' % ({'name':'Apple', 'price': 5.243}))
+print('Product: {name:10s}, Price per unit: {price:10.2f}.'.format(name='Apple', price=5.243))
+
+
 
 
