@@ -77,9 +77,9 @@ print()
 # 	'_': '/Users/charlie/opt/anaconda3/bin/python', 
 # 	'LC_CTYPE': 'UTF-8'
 # }
-print(os.environ['USER'])
+print(os.environ['PATH'])
 print(os.environ['HOME'])
-print(os.environ['PWD'])
+print(os.environ['USER'])
 print()
 
 ## example07 : 현재경로
@@ -118,6 +118,7 @@ print()
 import random
 
 print(random.random()) # 0 ~ 1 사이 실수
+print(random.randint(0, 100)) # 0 ~ 100 사이정수
 print()
 
 ## example14 : 섞기
@@ -137,5 +138,5 @@ import webbrowser
 
 webbrowser.open('http://google.com')
 webbrowser.open_new('http://google.com')
-
+webbrowser.open_new('http://google.com')
 

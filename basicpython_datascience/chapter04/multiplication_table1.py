@@ -5,7 +5,7 @@ def main():
 
 def multi_table():
     num = 0
-    while num <= 0:
+    while 0 >= num or num > 9:
         num = int(input('Enter a number : '))
     print(f'Start {num} multiplications.')
     for i in range(1, 10):

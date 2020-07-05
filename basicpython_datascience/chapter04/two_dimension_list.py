@@ -1,0 +1,14 @@
+kor_score = [49, 79, 20, 100, 80]
+math_score = [43, 59, 85, 30, 90]
+eng_score = [49, 79, 48, 60, 100]
+midterm_score = [kor_score, math_score, eng_score]
+
+num_students = len(kor_score)
+num_subjects = len(midterm_score)
+average_score = []
+for i in range(num_students):
+    total_score = []
+    for j in range(num_subjects):
+        total_score.append(midterm_score[j][i])
+    average_score.append(sum(total_score) / num_subjects)
+print(average_score)

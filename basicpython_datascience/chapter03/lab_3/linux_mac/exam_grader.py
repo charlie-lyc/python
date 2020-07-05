@@ -1,19 +1,5 @@
 # -*- coding: utf-8 -*-
 
-def main():
-    print("Start of Exam Grader Program")
-    print("============================")
-
-    number_of_subjects = get_number_of_subjects()
-    total_score = sum_of_scores(number_of_subjects)
-    average_score = get_average_score(
-        total_score=total_score, number_of_subjects=number_of_subjects)
-    print_exam_grader(average_score)
-
-    print("===========================")
-    print("End of Exame Grader Program")
-
-
 # 총 과목 수를 Console를 통해 받기
 def get_number_of_subjects():
     number_of_subjects = int(input('과목수를 입력하세요: '))
@@ -49,6 +35,18 @@ def print_exam_grader(average_score):
         grade = 'F'
     print("평균 점수: ", average_score)
     print("학     점: ", grade)
+
+
+def main():
+    print("Start of Exam Grader Program")
+    print("============================")
+    number_of_subjects = get_number_of_subjects()
+    total_score = sum_of_scores(number_of_subjects)
+    average_score = get_average_score(
+        total_score=total_score, number_of_subjects=number_of_subjects)
+    print_exam_grader(average_score)
+    print("===========================")
+    print("End of Exame Grader Program")
 
 
 if __name__ == '__main__':

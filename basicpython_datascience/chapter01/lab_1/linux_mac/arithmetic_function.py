@@ -1,5 +1,25 @@
 # -*- coding: utf8 -*-
 
+def addition(a, b):
+    result = a + b
+    return result
+
+
+def minus(a, b):
+    result = a - b
+    return result
+
+
+def multiplication(a, b):
+    result = a * b
+    return result
+
+
+def division(a, b):
+    result = a / b
+    return result
+
+
 def main():
     print("Addition Test")
     print(addition(3, 5))  # Expected Result: 8
@@ -24,26 +44,6 @@ def main():
     print(division(10, 5) == 2)  # Expected Result: True
     print(division(10, -3) == 0.33333)  # Expected Result: False
     print("division Test Closed \n")
-
-
-def addition(a, b):
-    result = a + b
-    return result
-
-
-def minus(a, b):
-    result = a - b
-    return result
-
-
-def multiplication(a, b):
-    result = a * b
-    return result
-
-
-def division(a, b):
-    result = a / b
-    return result
 
 
 if __name__ == "__main__":
