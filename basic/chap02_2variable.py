@@ -32,11 +32,11 @@ print()
 # 2. 값 생성
 # 3. 콘솔 출력
 
-# example1
+# example01
 print(300)
 print(int(300))
 
-# example2
+# example02
 # n -> 777
 n = 777
 print(n, type(n))

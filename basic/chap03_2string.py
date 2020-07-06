@@ -48,7 +48,7 @@ Test
 '''
 # binding
 multi_str2 = \
-'''
+    '''
 String
 Multi Line
 Test
@@ -60,9 +60,9 @@ Test
 # Test
 # '''
 multi_str3 = \
-'String' \
-'Multi Line' \
-'Test'
+    'String' \
+    'Multi Line' \
+    'Test'
 print(multi_str1)
 print(multi_str2)
 print(multi_str3)
@@ -86,13 +86,15 @@ print(str(10.1))
 print(str(True), type(str(True)))
 print()
 
-# function : captitalize, count, endswith, isalnum, isalpha, replace, sorted, split, startswith, upper...
+# function : captitalize, count, endswith, isalnum, isalpha, replace, sorted, split, startswith, upper, count...
 print('Capitalize: ', str_o1.capitalize())
 print('Endswith: ', str_o2.endswith('!'))
 print('Replace: ', str_o1.replace('thon', ' good'))
 print('Sorted: ', sorted(str_o1))
 print('Split: ', str_o3.split(' '))
 print('Split: ', str_o4.split(', '))
+print('Count: ', str_o4.count('e'))
+print('Count: ', str_o4.count('eo'))
 print()
 
 # iteration(sequence) : __iter__
@@ -123,5 +125,17 @@ print(ord('z'))
 print(ord(a))
 # from ascii to character
 print(chr(122))
+print()
+
+# More
+print('1'.isdigit())
+print('0'.isdigit())
+print('-1'.isdigit())
+print('1.0'.isdigit())
+print('a'.isdigit())
 
 
+"""
+a.startswith('b')   a.upper()   a.lower()   a.title()
+a.count('b')   a.find('b')   a.rfind('b')   a.strip()
+"""

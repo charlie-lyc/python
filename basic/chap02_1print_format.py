@@ -1,7 +1,8 @@
 # chapter02-1
 
-# print function
 import sys
+
+# print function
 print('python start!')
 print('''python start!''')
 print("""python start!""")
@@ -89,9 +90,5 @@ print('Price per unit: {1:010.2f}, Product: {0:_>10s}.'.format('Apple', 5.243))
 print()
 
 # dict type !!!
-print('Product: %(name)10s, Price per unit: %(price)10.2f.' % ({'name':'Apple', 'price': 5.243}))
+print('Product: %(name)10s, Price per unit: %(price)10.2f.' % ({'name': 'Apple', 'price': 5.243}))
 print('Product: {name:10s}, Price per unit: {price:10.2f}.'.format(name='Apple', price=5.243))
-
-
-
-
