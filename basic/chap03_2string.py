@@ -139,3 +139,8 @@ print('a'.isdigit())
 a.startswith('b')   a.upper()   a.lower()   a.title()
 a.count('b')   a.find('b')   a.rfind('b')   a.strip()
 """
+
+# String to List
+word = 'hello'
+word_list = list(word)
+print(word_list)

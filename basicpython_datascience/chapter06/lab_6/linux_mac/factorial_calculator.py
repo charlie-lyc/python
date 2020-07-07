@@ -21,13 +21,13 @@ def main():
     while True:
         user_input = input('Input a positive number : ')
         result = is_positive_number(user_input)
-        if result == True:
-            print(get_factorial_value(int(user_input)))
-        elif user_input == '0':
-            print('Thank you for using this program')
+        if user_input == '0':
             break
+        elif result == True:
+            print(get_factorial_value(int(user_input)))
         else:
             print('Input again, Please')
+    print('Thank you for using this program')
 
 
 if __name__ == "__main__":

@@ -74,5 +74,8 @@ print(t1)
 print(t2)
 print(x1, x2, x3)
 print(x4, x5, x6)
+print()
 
-
+# Impossible
+# print(t1.append(7))
+# print(t1.remove(3))

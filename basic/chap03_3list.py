@@ -79,29 +79,33 @@ a.sort()
 print('a :', a)
 a.reverse()
 print('a :', a)
-print('index of 3 :', a.index(3)) # 인덱스를 구하는 함수
-a.insert(2, 7)
+print('index of 3 :', a.index(3))  # 인덱스를 구하는 함수
+a.insert(2, 7)  # 인덱스 2에 7을 추
 print('a :', a)
 a.reverse()
 print('a :', a)
 # del a[6] # 데이터 갯수가 많을 때 인덱스를 세는 것은 불편하거나 거의 불가능
-a.remove(10) # 지우고 싶은 값을 바로 입력
+a.remove(10)  # 지우고 싶은 값을 바로 입력
+print()
 print('a :', a)
-print('pop of a :', a.pop()) # append의 역순으로 pop
+print('pop of a :', a.pop())  # append의 역순으로 값을 추출
 print('a :', a)
 print('pop of a :', a.pop())
 print('a :', a)
-print('count of 1 :', a.count(1)) # 갯수 구하기
+print('pop of a :', a.pop(0))  # 인덱스 0의 값을 추출 : pop(인덱스)
+print('a :', a)
+print('count of 1 :', a.count(1))  # 갯수 구하기
 print('count of 5 :', a.count(5))
 ex = [8, 9]
 a.extend(ex)
 print('a :', a)
 a.append(ex)
 print('a :', a)
+a.clear()
+print('a :', a)
+print()
 
 # iteration
 while a:
     data = a.pop()
     print(data)
-
-
