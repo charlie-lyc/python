@@ -80,9 +80,7 @@ def get_strikes_or_ball(user_input_number, random_number):
 
 def is_yes(one_more_input):
     result = None
-    if one_more_input.lower() == 'yes':
-        result = True
-    elif one_more_input.lower() == 'y':
+    if one_more_input.lower() == 'yes' or one_more_input.lower() == 'y':
         result = True
     else:
         result = False
@@ -91,9 +89,7 @@ def is_yes(one_more_input):
 
 def is_no(one_more_input):
     result = None
-    if one_more_input.lower() == 'no':
-        result = True
-    elif one_more_input.lower() == 'n':
+    if one_more_input.lower() == 'no' or one_more_input.lower() == 'n':
         result = True
     else:
         result = False
@@ -102,13 +98,15 @@ def is_no(one_more_input):
 
 def main():
     print("Play Baseball")
-    random_number = str(get_not_duplicated_three_digit_number())
-    # random_number = str(694)
-    # random_number = str(468)
-    # random_number = str(572)
-    print("Random Number is : ", random_number)
+    random_number = 999
     # ===Modify codes below=============
     while True:
+        if random_number == 999:
+            random_number = str(get_not_duplicated_three_digit_number())
+            # random_number = str(694)
+            # random_number = str(468)
+            # random_number = str(572)
+            print("Random Number is : ", random_number)
         user_input = input("Input guess number : ")
         if user_input == "0":
             break
@@ -121,17 +119,16 @@ def main():
             continue
         elif sum(result) > 0:
             print(f"Strikes : {result[0]} , Balls : {result[1]}")
-        if result[0] == 3:
-            one_more_input = None
-            while True:
-                one_more_input = input("You win, one more(Y/N)?")
-                if is_no(one_more_input) == True or is_yes(one_more_input) == True:
+            if result[0] == 3:
+                one_more_input = None
+                while True:
+                    one_more_input = input("You win, one more(Y/N) ?")
+                    if is_no(one_more_input) == True or is_yes(one_more_input) == True:
+                        break
+                    print("Wrong Input, Input again")
+                if is_no(one_more_input) == True:
                     break
-                print("Wrong Input, Input again")
-            if is_no(one_more_input) == True:
-                break
-            random_number = str(get_not_duplicated_three_digit_number())
-            print("Random Number is : ", random_number)
+                random_number = 999
     # ==================================
     print("Thank you for using this program")
     print("End of the Game")
