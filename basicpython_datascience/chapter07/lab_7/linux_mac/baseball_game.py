@@ -72,10 +72,10 @@ def get_strikes_or_ball(user_input_number, random_number):
         for j, vj in enumerate(un_list):
             if vi == vj:
                 if i == j:
-                    result[0] +=1
+                    result[0] += 1
                 else:
-                    result[1] +=1
-    return result    
+                    result[1] += 1
+    return result
 
 
 def is_yes(one_more_input):
@@ -99,25 +99,27 @@ def is_no(one_more_input):
         result = False
     return result
 
- 
+
 def main():
     print("Play Baseball")
-    # random_number = str(get_not_duplicated_three_digit_number())
-    random_number = str(694)
+    random_number = str(get_not_duplicated_three_digit_number())
+    # random_number = str(694)
+    # random_number = str(468)
+    # random_number = str(572)
     print("Random Number is : ", random_number)
     # ===Modify codes below=============
     while True:
         user_input = input("Input guess number : ")
         if user_input == "0":
             break
-        if is_validated_number(user_input) == False:
+        elif is_validated_number(user_input) == False:
             print("Wrong Input, Input again")
             continue
         result = get_strikes_or_ball(user_input, random_number)
         if sum(result) == 0:
             print("Wrong Input, Input again")
             continue
-        if sum(result) > 0:
+        elif sum(result) > 0:
             print(f"Strikes : {result[0]} , Balls : {result[1]}")
         if result[0] == 3:
             one_more_input = None
@@ -125,14 +127,11 @@ def main():
                 one_more_input = input("You win, one more(Y/N)?")
                 if is_no(one_more_input) == True or is_yes(one_more_input) == True:
                     break
-                else:
-                    print("Wrong Input, Input again")
-            if is_yes(one_more_input) == True:
-                random_number = str(get_not_duplicated_three_digit_number())
-                print("Random Number is : ", random_number)
-                continue
-            else:
+                print("Wrong Input, Input again")
+            if is_no(one_more_input) == True:
                 break
+            random_number = str(get_not_duplicated_three_digit_number())
+            print("Random Number is : ", random_number)
     # ==================================
     print("Thank you for using this program")
     print("End of the Game")
@@ -140,6 +139,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
-
