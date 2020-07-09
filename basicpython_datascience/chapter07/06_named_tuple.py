@@ -47,3 +47,5 @@ print(student_namedtuple_list[0].fullname)
 # 즉, namedtuple인 Student의 경우에 args가 columns의 element 갯수(11)만큼 있어야 하는데
 # 주어진 것은 csv파일로 부터 읽어들인 1줄 데이터에 대한 list 1개이다.
 # 따라서 이 list로 부터 각각의 element들을 args로 인식시키기 위해 '*'를 사용했다.
+
+# namedtuple이 속성값만 가지는 반면, class는 속성뿐만 아니라 함수도 가진다.

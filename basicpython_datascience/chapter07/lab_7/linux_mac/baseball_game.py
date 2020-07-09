@@ -19,9 +19,9 @@ def is_digit(user_input_number):
 
 
 def is_between_100_and_999(user_input_number):
-    result = None
     number = int(user_input_number)
-    if 100 <= number <= 999:
+    result = None
+    if 100 <= number < 1000:
         result = True
     else:
         result = False
@@ -29,9 +29,9 @@ def is_between_100_and_999(user_input_number):
 
 
 def is_duplicated_number(three_digit):
-    result = None
     li = list(three_digit)
     se = set(three_digit)
+    result = None
     if len(li) == len(se):
         result = False
     else:
