@@ -4,8 +4,6 @@ import random
 
 
 def get_random_number():
-    # Helper Function - 지우지 말 것
-    # 100부터 999까지 수를 램덤하게 반환함
     return random.randrange(100, 1000)
 
 
@@ -99,37 +97,36 @@ def is_no(one_more_input):
 def main():
     print("Play Baseball")
     random_number = 999
-    # ===Modify codes below=============
     while True:
         if random_number == 999:
-            random_number = str(get_not_duplicated_three_digit_number())
+            # random_number = str(get_not_duplicated_three_digit_number())
             # random_number = str(694)
             # random_number = str(468)
-            # random_number = str(572)
+            random_number = str(572)
             print("Random Number is : ", random_number)
         user_input = input("Input guess number : ")
+        user_input = user_input.strip()
         if user_input == "0":
             break
         elif is_validated_number(user_input) == False:
             print("Wrong Input, Input again")
             continue
         result = get_strikes_or_ball(user_input, random_number)
-        if sum(result) == 0:
+        if result[0] == 0 and result[1] == 0:
             print("Wrong Input, Input again")
             continue
-        elif sum(result) > 0:
+        elif result[0] > 0 or result[1] > 0:
             print(f"Strikes : {result[0]} , Balls : {result[1]}")
             if result[0] == 3:
                 one_more_input = None
                 while True:
-                    one_more_input = input("You win, one more(Y/N) ?")
+                    one_more_input = input("You win, one more(Y/N)?")
                     if is_no(one_more_input) == True or is_yes(one_more_input) == True:
                         break
                     print("Wrong Input, Input again")
                 if is_no(one_more_input) == True:
                     break
                 random_number = 999
-    # ==================================
     print("Thank you for using this program")
     print("End of the Game")
 

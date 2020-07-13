@@ -22,10 +22,11 @@ def get_number_of_characters_without_blank(filename):
 
 
 def get_number_of_lines(filename):
-    contents = get_file_contents(filename)
-    line_list = contents.split('\n')
-    result = len(line_list[:-1])
-    return result
+    contents = None
+    with open(filename, 'r', encoding='utf8') as f:
+        contents = f.readlines()
+    f.close()
+    return len(contents)
 
 
 def get_number_of_target_words(filename, target_words):
