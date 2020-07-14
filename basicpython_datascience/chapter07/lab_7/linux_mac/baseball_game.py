@@ -9,10 +9,12 @@ def get_random_number():
 
 def is_digit(user_input_number):
     result = None
-    if user_input_number.isdigit() == True:
-        result = True
-    else:
+    try:
+        int(user_input_number)
+    except:
         result = False
+    else:
+        result = True
     return result
 
 
@@ -39,26 +41,18 @@ def is_duplicated_number(three_digit):
 
 def is_validated_number(user_input_number):
     result = None
-    if is_digit(user_input_number) == True:
-        if is_between_100_and_999(user_input_number) == True:
-            if is_duplicated_number(user_input_number) == False:
-                result = True
-            else:
-                result = False
-        else:
-            result = False
+    if is_digit(user_input_number) == True and is_between_100_and_999(user_input_number) == True and is_duplicated_number(user_input_number) == False:
+        result = True
     else:
         result = False
     return result
 
 
 def get_not_duplicated_three_digit_number():
-    result = None
-    while True:
+    random_number = 999
+    while is_validated_number(str(random_number)) == False:
         random_number = get_random_number()
-        if is_validated_number(str(random_number)) == True:
-            result = random_number
-            break
+    result = random_number
     return result
 
 
@@ -100,9 +94,9 @@ def main():
     while True:
         if random_number == 999:
             # random_number = str(get_not_duplicated_three_digit_number())
-            # random_number = str(694)
+            random_number = str(694)
             # random_number = str(468)
-            random_number = str(572)
+            # random_number = str(572)
             print("Random Number is : ", random_number)
         user_input = input("Input guess number : ")
         user_input = user_input.strip()
